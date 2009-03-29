@@ -1,0 +1,18 @@
+Higher Computing Software Development in Ruby
+=============================================
+
+This directory is organised as follows:
+
+>	`/Originals` -- The source PDF files from SCHOLAR.
+>	`/Docs` -- Ruby course documentation in Markdown format.
+>	`/Examples` -- Any code examples referenced in the text.
+
+Approach
+--------
+
+The document `/Originals/HigherSoftwareDevelopment.pdf` is mostly general reference material on software development. The specific sections which need to be Rubified are:
+
+* Section 6: High Level Language Constructs 1
+* Section 7: High Level Language Constructs 2
+* Section 8: Procedures and Standard Algorithms
+

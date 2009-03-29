@@ -3,7 +3,12 @@ SQA Computing.rb
 
 This is a project to rewrite existing teaching materials for the Scottish Qualifications Agency's Computing exams to use Ruby.  The existing materials use VB or Delphi.
 
+Scope
+-----
+
 The scope of the project, initially, is to rewrite the bare minimum of material to enable the course to be taught using Ruby as the programming language.  This is absolutely a stop-gap measure as we wait for the next generation of Scottish qualifications to stabilise.
+
+It is outside the scope of this project to rewrite the core content of the materials. The intent is to recreate the programming exercises in Ruby, but not to introduce the more esoteric Ruby-specific language constructs such as blocks. It will, of course, be necessary to refer to basic String and number APIs, such as `String#casecmp`, as replacements for the VB APIs mentioned in the text.
 
 Source Documents
 ----------------
@@ -28,3 +33,5 @@ The repository is organised by course:
 
 >  `/higher`  
 >  `/intermediate2`
+
+Each course directory has a README, which discusses the specific work required for each course.

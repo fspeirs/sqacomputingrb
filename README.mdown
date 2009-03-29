@@ -19,7 +19,7 @@ The base materials for Higher Computing are the SCHOLAR documents, which are cov
 
 >	Members of the SCHOLAR Forum may reproduce this publication in whole
 >	or in part for educational purposes within their establishment
->	providing that no proÞt accrues at any stage.
+>	providing that no profit accrues at any stage.
 
 Repository Organisation
 -----------------------

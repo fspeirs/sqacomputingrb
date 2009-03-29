@@ -26,5 +26,5 @@ Repository Organisation
 
 The repository is organised by course:
 
->  `/higher`
+>  `/higher`  
 >  `/intermediate2`

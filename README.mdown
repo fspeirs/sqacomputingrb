@@ -35,3 +35,8 @@ The repository is organised by course:
 >  `/intermediate2`
 
 Each course directory has a README, which discusses the specific work required for each course.
+
+Miscellaneous
+-------------
+
+* [Markdown Syntax Reference](http://daringfireball.net/projects/markdown/syntax)

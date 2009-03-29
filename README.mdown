@@ -1,0 +1,30 @@
+SQA Computing.rb
+================
+
+This is a project to rewrite existing teaching materials for the Scottish Qualifications Agency's Computing exams to use Ruby.  The existing materials use VB or Delphi.
+
+The scope of the project, initially, is to rewrite the bare minimum of material to enable the course to be taught using Ruby as the programming language.  This is absolutely a stop-gap measure as we wait for the next generation of Scottish qualifications to stabilise.
+
+Source Documents
+----------------
+This project is _not_ affiliated with the Scottish Qualifications Agency in any way.
+
+The base materials for Intermediate 2 are documents produced by Learning and Teaching Scotland which contain the following copyright statement:
+
+>	This publication may be reproduced in whole or in part for
+>	educational purposes by educational establishments in Scotland
+>	provided that no profit accrues at any stage. 
+
+The base materials for Higher Computing are the SCHOLAR documents, which are covered by the following copyright statement:
+
+>	Members of the SCHOLAR Forum may reproduce this publication in whole
+>	or in part for educational purposes within their establishment
+>	providing that no proŞt accrues at any stage.
+
+Repository Organisation
+-----------------------
+
+The repository is organised by course:
+
+>  `/higher`
+>  `/intermediate2`

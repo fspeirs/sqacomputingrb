@@ -309,7 +309,7 @@ In the line of code above, `10` is a _literal_ Integer. In our string example `"
 
 In Ruby, we use the `+` symbol to concatenate strings:
 
->	`finished_line = line_one + line_two
+>	`finished_line = line_one + line_two`
 
 If you typed in these three lines exactly, IRB should print:
 

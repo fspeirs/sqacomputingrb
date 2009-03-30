@@ -10,6 +10,14 @@ The scope of the project, initially, is to rewrite the bare minimum of material 
 
 It is outside the scope of this project to rewrite the core content of the materials. The intent is to recreate the programming exercises in Ruby, but not to introduce the more esoteric Ruby-specific language constructs such as blocks. It will, of course, be necessary to refer to basic String and number APIs, such as `String#casecmp`, as replacements for the VB APIs mentioned in the text.
 
+TODO
+----
+
+1. Identify the VB-specific areas of each document.  This is more likely to be an issue for the areas of the documents which refer to specific VB IDE infrastructure.
+2. Produce a Rubified version of these.
+3. Write the content.
+4. Have the content reviewed for technical accuracy.
+
 Source Documents
 ----------------
 This project is _not_ affiliated with the Scottish Qualifications Agency in any way.

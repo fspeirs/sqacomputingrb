@@ -1,0 +1,17 @@
+Procedures and Standard Algorithms
+==================================
+
+1. Introduction
+2. Modularity
+3. Procedures and Functions
+4. General Procedures
+5. Parameter passing: Call by Value
+6. Parameter passing: Call by Reference
+7. Functions
+8. Recursion
+9. Standard Algorithms
+10. Linear Search
+11. Counting Occurrences
+12. Finding Maximum and Minimum
+13. Summary
+

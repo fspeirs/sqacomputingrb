@@ -1,0 +1,23 @@
+High Level Language Constructs 1
+================================
+
+Contents
+--------
+
+# Introduction
+# The Ruby Programming Environment: IRB
+# The Ruby Programming Environment: Editing
+# The Ruby Programming Environment: Input and Output
+# Data Types
+# Variables
+# Declaring Constants
+# Variables and Scope
+# Operators
+# Programming Constructs: Sequence
+# Programming Constructs: Selection
+# The IF statement
+# The If..then..else statement
+# Comparison and logical Operators: And, Or, Xor, Not.
+# Nested IF statements
+# Case statements
+# Summary

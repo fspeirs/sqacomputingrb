@@ -4,20 +4,70 @@ High Level Language Constructs 1
 Contents
 --------
 
-# Introduction
-# The Ruby Programming Environment: IRB
-# The Ruby Programming Environment: Editing
-# The Ruby Programming Environment: Input and Output
-# Data Types
-# Variables
-# Declaring Constants
-# Variables and Scope
-# Operators
-# Programming Constructs: Sequence
-# Programming Constructs: Selection
-# The IF statement
-# The If..then..else statement
-# Comparison and logical Operators: And, Or, Xor, Not.
-# Nested IF statements
-# Case statements
-# Summary
+1. Introduction
+2. The Ruby Programming Environment: IRB
+3. The Ruby Programming Environment: Editing
+4. The Ruby Programming Environment: Input and Output
+5. Data Types
+6. Variables
+7. Declaring Constants
+8. Variables and Scope
+9. Operators
+10. Programming Constructs: Sequence
+11. Programming Constructs: Selection
+12. The IF statement
+13. The If..then..else statement
+14. Comparison and logical Operators: And, Or, Xor, Not.
+15. Nested IF statements
+16. Case statements
+17. Summary
+
+1. Introduction
+---------------
+
+This topic introduces you to the Ruby programming language and the tools used for building programs using Ruby.
+
+These materials cover the basic programming concepts needed for SQA Higher Computing: variables, operators, loops, conditional statements, comparison operators. We also look at a few standard algorithms.
+
+### Conventions ###
+
+This document uses certain styles to show you what to type in. Code will always be presented in `this font`.  When you have to type something in your Terminal program, it will be presented like this:
+
+>	`$ ls`
+
+You should not type the `$` sign. The `$` is there to indicate the command prompt which may be different on your system.
+
+### Further Reading ###
+
+There are numerous Ruby resources on the web.  One that you might find very useful is Chris Pine's book [Learn to Program](http://pine.fm/LearnToProgram/), which uses Ruby to teach programming and is freely available online.
+
+2. The Ruby Programming Environment: IRB
+----------------------------------------
+
+Ruby comes with a program called IRB ("Interactive RuBy"). This is a program which runs in your Terminal and lets you type Ruby commands and immediately see their results.
+
+Try IRB now. Open your Terminal program and type:
+
+>	`$ irb`
+
+You should notice the command prompt changes to:
+
+>	`>>`
+
+and the computer is waiting for you to type something.  Type these lines, pressing return after each line:
+
+>	`>> a = 10`
+>	`>> b = 20`
+>	`>> a + b`
+
+Your output should look like this:
+
+>	`>> a = 10`  
+>	`=> 10`  
+>	`>> b = 20`  
+>	`=> 20`  
+>	`>> a + b`  
+>	`=> 30`  
+>	`>>`  
+
+What we've just done is created two variables - `a` and `b` - and added them together. IRB printed the result for us at each stage using the `=>` prompt line.

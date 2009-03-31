@@ -345,3 +345,47 @@ You should get:
 >	`>> puts line_one.reverse`  
 >	`lirpA ni yad dloc thgirb a saw tI`  
 >	`=> nil`  
+
+### Changing the Case of a String ###
+
+We've already seen the upcase function that a string can perform - it creates a new String object with the same characters in the original String, but in uppercase.
+
+Ruby strings can be made to change case.  Type these lines into IRB:
+
+>	`>> a = "Apple Computer"`  
+>	`=> "Apple Computer"`  
+>	`>> b = a.upcase`  
+>	`=> "APPLE COMPUTER"`  
+>	`>> c = b.downcase`  
+>	`=> "apple computer"`  
+
+In the first line, we set the variable `a` to contain a String object with the text "Apple Computer", which is a mixture of upper and lower case letters.  Next, we create the variable `b` and assign to it a version of `a` that has been changed into all-UPPERCASE. Finally, we create `c`, which has a version of `b` that has been converted to all lowercase.
+
+9. Operators
+------------
+
+In any programming language, operators are used to make changes to variables - whether to combine them or assign new objects to the variables.
+
+### Assignment ###
+
+Assignment means placing some value in the 'box' of a certain variable. Ruby uses the equals sign ("=") to assign values to variables.
+
+>	`a = 6`  
+
+This code creates a variable `a` and assigns a new Integer object to it with the value 6.
+
+### Mathematical Operators ###
+
+Ruby uses the symbols you would expect for maths:
+
+* Addition: +
+* Subtraction: -
+* Multiplication: *
+* Modulus: %
+
+Exponentiation (raising a number to the power of another number) is done using the `**` operator. Some other languages use  the `^` operator. Try this in IRB:
+
+>	`a = 2`  
+>	`puts a**2`
+
+IRB should return `4`.

@@ -56,9 +56,9 @@ You should notice the command prompt changes to:
 
 and the computer is waiting for you to type something.  Type these lines, pressing return after each line:
 
->	`>> a = 10`
->	`>> b = 20`
->	`>> a + b`
+>	`>> a = 10`  
+>	`>> b = 20` 
+>	`>> a + b` 
 
 Your output should look like this:
 
@@ -99,7 +99,7 @@ To create a Ruby program, just open up a text editor (e.g. TextWrangler or TextM
 
 To run your code, save it first and then type:
 
->	`$ ruby myprogram.rb`
+>	`$ ruby myprogram.rb`  
 
 ...in the Terminal.  If you're running in TextMate, you can just hit Command-R to run your program.
 
@@ -113,7 +113,7 @@ Try this in IRB:
 >	`>> a = "This is some text"`  
 >	`>> b = "This is some other text`  
 >	`>> puts b`  
->	`>> puts a`
+>	`>> puts a`  
 
 You should see the following in IRB:
 
@@ -132,7 +132,7 @@ So when you told IRB to `puts a`, IRB printed the text that you had stored in th
 
 You can print out the results of mathematical operations too:
 
->	`>> puts  10 * 100`
+>	`>> puts  10 * 100`  
 
 IRB should respond by printing the number 1000.
 
@@ -262,11 +262,11 @@ The value of Pi won't change during our program, so we can declare that as a con
 
 There is one slight change from the previous program. In this program, we want to let the user enter a floating-point number for the radius.  Remember that `gets` returns a String object containing the text entered by the user? We fixed that in the last program by asking that string to convert to an Integer using:
 
->	`length = gets.to_i`
+>	`length = gets.to_i`  
 
 In this program, we need to use `to_f` to convert the String into a floating-point number:
 
->	`radius = gets.to_f`
+>	`radius = gets.to_f`  
 
 Here's the complete program, with comments in the lines beginning with `#`:
 
@@ -299,35 +299,35 @@ The word _concatenation_ means _to join_, so 'string concatenation' means joinin
 Firstly, let's create two String objects. Type these into IRB:
 
 >	`>> line_one = "It was a bright cold day in April"`  
->	`>>line_two = "and the clocks were striking thirteen"`
+>	`>>line_two = "and the clocks were striking thirteen"`  
 
 We're creating these String objects by typing _literal_ strings into the program.  You've already done this with Number objects when you typed code like:
 
->	`a = 10`
+>	`a = 10`  
 
 In the line of code above, `10` is a _literal_ Integer. In our string example `"It was a bright cold day in April"` is a _literal_ string.
 
 In Ruby, we use the `+` symbol to concatenate strings:
 
->	`finished_line = line_one + line_two`
+>	`finished_line = line_one + line_two`  
 
 If you typed in these three lines exactly, IRB should print:
 
->	`=> "It was a bright cold day in Apriland the clocks were striking thirteen"`
+>	`=> "It was a bright cold day in Apriland the clocks were striking thirteen"`  
 
 What's the problem?  Well, there's no space between "April" and the word "and": "Apriland".  That's because we created `line_one` and `line_two` with no spaces at either end, and the `+` operator doesn't insert a space for us - it just joins the two strings end-to-end.
 
 How can we fix this? Let's concatenate a space in between.  Type this into IRB:
 
 >	`>> finished_line = line_one + " " + line_two`  
->	`=> "It was a bright cold day in April and the clocks were striking thirteen"`
+>	`=> "It was a bright cold day in April and the clocks were striking thirteen"`  
 
 ### Getting the length of a String ###
 
 Because Strings are objects in Ruby we can ask a String to tell us how long it is.  Let's use the same string as in the last example in IRB:
 
 >	`>> line_one = "It was a bright cold day in April"`  
->	`>> puts line_one.length`
+>	`>> puts line_one.length`  
 
 IRB should respond with the number 33.
 
@@ -338,7 +338,7 @@ A String object can convert itself into a new string with all the letters revers
 Try this in IRB:
 
 >	`>> line_one = "It was a bright cold day in April"`  
->	`>> puts line_one.reverse`
+>	`>> puts line_one.reverse`  
 
 You should get:
 

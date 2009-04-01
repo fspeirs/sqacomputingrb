@@ -361,6 +361,37 @@ Ruby strings can be made to change case.  Type these lines into IRB:
 
 In the first line, we set the variable `a` to contain a String object with the text "Apple Computer", which is a mixture of upper and lower case letters.  Next, we create the variable `b` and assign to it a version of `a` that has been changed into all-UPPERCASE. Finally, we create `c`, which has a version of `b` that has been converted to all lowercase.
 
+### Comparing Strings ###
+
+One of the most important String operations is comparing two strings to see if they are equal.  In Ruby, you can simply use `==` for Strings.  Code such as :
+
+>	`string1 == string2`
+
+will return `true` if `string1` and `string2` are identical in every character, **including case**.  This is a *case-sensitive* comparison.  Try this in IRB:
+
+>	`"Foo" == "Foo"  
+
+IRB should return `true`.  However, if you try this:
+
+>	`"FOO" == "Foo"`  
+
+IRB will return `false` because the case of the O's differ.
+
+We can do a *case-insensitive* comparison between two strings by asking one string whether it is equal to another.  The function for this is `casecmp`.  
+Try this in IRB:
+
+>	`"FOO".casecmp("foo")`  
+
+Read that line as "ask the string FOO if it is equal to the string foo". The result should be `0`.
+
+Why zero?
+
+Well, `casecmp` doesn't return a simple true/false value. It returns a number that will be:
+
+* Less than zero if the first string sorts before the second.
+* Exactly zero if the strings are the same.
+* More than zero if the first string sorts after the second string.
+
 9. Operators
 ------------
 
@@ -373,6 +404,10 @@ Assignment means placing some value in the 'box' of a certain variable. Ruby use
 >	`a = 6`  
 
 This code creates a variable `a` and assigns a new Integer object to it with the value 6.
+
+### Equality ###
+
+Since we've already used the `=` sign for assignment, what can we use to test if two numbers are equal?  Ruby uses *two* equals signs, the `==` operator.
 
 ### Mathematical Operators ###
 
@@ -389,3 +424,89 @@ Exponentiation (raising a number to the power of another number) is done using t
 >	`puts a**2`
 
 IRB should return `4`.
+
+### Operator Precedence ###
+
+When several operators are used in a single expression, the intended order can be ambiguous. Take the following code, for example:
+
+>	`a = 3 * 10 + 5`  
+
+Should the value of `a` be 30 (3x10, then add 5) or 45 (10+5, then multiply by 3)?  Programming languages use a set of rules called *operator precedence* to ensure that these ambiguous statements are consistently interpreted.
+
+Ruby has the following precedence rules, in order from first to last:
+
+1. Exponentiation (`**`)
+2. Multiply (`*`), Divide (`/`) and Modulus (`%`)
+3. Addition (`+`) and subtraction (`-`)
+
+This means that, in the following example:
+
+>	`a = 2**2 * 10 + 1`  
+
+the answer is 41 because the operators are evaluated in this order:
+
+>	`2**2`  
+>	`4 * 10`  
+>	`40 + 1`  
+
+When you need to ensure that operators are evaluated in a specific order, use parentheses to group them. Expressions in parentheses are evaluated first, regardless of operator precedence.
+
+Try these two examples in IRB:
+
+>	`1 + 1 * 2`  
+>	`(1 + 1) * 2`  
+
+The first example evaluates to 3 because the `1 * 2` operation was done before the `1 +` operation, thus the final addition was `1 + 2`.
+
+The second example evaluates to 4 because `1 + 1` was evaluated first, then mutliplied by 2, to give `2 * 2`.
+
+Try to work out the result of these expressions, then try them in IRB:
+
+>	`4 + 5 * 2`  
+>	`(4 + 5) * 2`  
+>	`3 + (7 - 5)**2 * 4`  
+
+
+10. Programming Constructs
+--------------------------
+
+### Sequence ###
+
+Sequence is the order in which the computer executes lines of code.  Under normal circumstances, lines of code are executed one after the other, from the top of the program to the bottom.
+
+For example, in the following program:
+
+>	`a = "Hello World"`  
+>	`b = "This is my Ruby program"`  
+>	`puts a`  
+>	`puts b`  
+
+The computer will print the contents of `a`, follwed by the contents of `b`, then the program will terminate.
+
+### Selection ###
+
+Control structures in programming languages let you make decisions about which instruction to perform next.  Going directly from top to bottom of a program isn't always exactly what you want. Sometimes you need to do different instructions depending on the information available to the program.
+
+Ruby has a large number of constructs that allow selection of different instructions, but this section will focus on these:
+
+* The `if` statement.
+* Logical operators in decision making.
+* The `if .. else` statement.
+* Nested `if` statements.
+* Multi-way branching with `elsif`.
+* The `case` statement.
+
+### The If Statement ###
+
+In English, you might give an instruction like "If it is raining, take an umbrella".  That is a *conditional statement* - only take an umbrella if the condition "it is raining" is true. There's no need to take an umbrella if it's not raining.
+
+In Ruby, the if statement takes the following form:
+
+>	`if <condition> then`  
+>	`   <... code ...>`  
+>	`end`  
+
+In Ruby, anything that can be interpreted as a Number can be used as a `<condition>`.  When used as true/false values, Numbers are interpreted this way:
+
+* If the number is zero, it's false.
+* If the number is anything other than zero, it's true - even if it's a negative number.

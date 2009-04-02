@@ -506,7 +506,96 @@ In Ruby, the if statement takes the following form:
 >	`   <... code ...>`  
 >	`end`  
 
+*Fixme: Is this correct?*
 In Ruby, anything that can be interpreted as a Number can be used as a `<condition>`.  When used as true/false values, Numbers are interpreted this way:
 
 * If the number is zero, it's false.
 * If the number is anything other than zero, it's true - even if it's a negative number.
+*/FIXME*
+
+### Example: If Statement ###
+
+Suppose we want to write a program to ask the user for a number. If the number has the same value as one stored in a constant, the program will display a message of congratulations.
+
+Here is the pseudocode algorithm:
+
+1. Ask a number from the user
+2. Get the number the user types
+3. If (the number typed == the program constant) then
+4.   Display "Well done, you guessed correctly!"
+5. Display "Sorry, not correct!"
+
+The full Ruby code is shown below:
+
+>	`# Remember: in Ruby, names which start with `  
+>	`# 			capital letters are constants.`  
+>	`SECRET_NUMBER = 100`  
+>  
+>	`# 1. Ask the user for a number`  
+>	`puts "Please guess a number:"`  
+>
+>	`# 2. Get the number the user types`  
+>	`# (Remember that we need to use .to_i to convert the user's`  
+>	`# typing into an Integer.)`  
+>	`guessed_number = gets.to_i`  
+>	
+>	`if guessed_number == SECRET_NUMBER then`  
+>	`	puts "Congratulations, you guessed correctly!"`  
+>	`end`  
+>	
+>	`puts "Program end!"`  
+
+### Example: Checking User Input ###
+
+*Problem:* Write a program to accept numbers typed at the keyboard and print them out.  The program terminates when `-1` is entered.
+
+Pseudocode:
+
+1. Input number
+2. If number > 0 then
+3. Output number
+4. end
+5. Print message
+6. Terminate
+
+### The If...then...else statement ###
+
+So far, we have seen how you can use `if..then` to conditionally execute code. With `if..then`, the choice is simple: either execute the code contained in the `if` statement, or don't execute it.
+
+What if you want to provide two alternative blocks of code to be executed depending on whether a condition is true or false? That's what `if..then..else` is for:
+
+>	`if <condition> then`  
+>	`<...code block 1...>`  
+>	`else`  
+>	`<...code block 2...>`  
+>	`end`  
+
+If the `<condition>` is true, `code block 1` will be executed. If `<condition>` is false, `code block 2` will be executed.
+
+### Example: Single or Double ###
+
+**Problem:** Write a program to tell the user whether the number they typed in has one digit or two digits.
+
+**Pseudocode:**
+
+1. As the user to input a number between 1 and 99
+2. If the number < 10 then
+3.  Print "Single digit"
+4. else
+5.  Print "Double digit"
+6. end
+
+**Ruby:**
+
+>	`# Ask the user`  
+>	`puts "Please enter a number between 1 and 99:"`  
+>	
+>	`# Get the user input, convert it to Integer with to_i`  
+>	`user_number = gets.to_i`  
+>	
+>	`# Compare it to 10`  
+>	`if user_number < 10 then`  
+>	`	puts "Single digit"`  
+>	`else`  
+>	`  puts "Double digit"`  
+>	`end`  

@@ -19,8 +19,9 @@ Contents
 13. The If..then..else statement
 14. Relational and logical Operators: And, Or, Xor, Not.
 15. Nested IF statements
-16. Case statements
-17. Summary
+16. If...then..elsif
+17. Case statements
+18. Summary
 
 1. Introduction
 ---------------
@@ -760,3 +761,148 @@ This code will only print the statement if `n1` is zero _and_ `n2` is zero.
 >	`else`  
 >	`  puts "The words #{first_password} and #{second_password} are not identical."`  
 >	`end`  
+
+###Exercise: Validating Numeric Input and Program Testing###
+
+**Time:** 20 min 
+
+**Problem:** Use this fragments of code you have just seen in this section to help you write a program which will accept a value from the keyboard and print ÔyesÕ if it is positive and even. Test your program with positive and negative numbers, odd and even numbers and make sure it passes all the tests. Make a tabulated list of the numbers you use and the results the program gives for each input. Use both positive and negative numbers, not neglecting zero. 
+
+**Solution:** ValidatingNumericInput.rb
+
+###Logical OR###
+
+An expression that contains a logical `OR` is true if *either* part of the expression is true.  This is also known as _inclusive_ `OR`, because either one term, the other term _or both terms_ can be true to make the overall expression true.
+
+The behaviour of `OR` can be expressed in the following _truth table_:
+
+>	<table cellpadding=10 border=1>
+>	<tr><th>`X`</th><th>`Y`</th><th>`X OR Y`</th><tr>
+>	<tr><td>false</td><td>false</td><td>false</td></tr>
+>	<tr><td>true</td><td>false</td><td>true</td></tr>
+>	<tr><td>false</td><td>true</td><td>true</td></tr>
+>	<tr><td>true</td><td>true</td><td>true</td></tr>
+>	</table>
+
+Here's an example of using `OR` in Ruby code:
+
+>	`number = 9`  
+>	`if (number < 0) or (number > 5) then`  
+>	`puts "The number is not in the range 0-4."`  
+>	`end`  
+
+In this program fragment, when `number` is either less than zero _or_ more than 5, the message will be shown.
+
+###OR Example: Wash the Car?###
+
+**Problem:** A program is written to prompt the user to enter two conditions - a temperature and a weather forecast. If either or both of the conditions are met then the program will display a suitable message to go and wash the car. If no conditions are met the user will be informed that washing the car is not a good idea. The conditions are compared to program constants. 
+
+**Pseudocode Solution:** 
+
+1. Request a temperature from the user
+2. Request weather condition
+3. If (temperateure >= 15) or (condition = "Sunny") then
+4.   display "Wash the car"
+5. else
+6.   display "Not a good idea!"
+
+**Ruby Solution:** WashTheCar.rb
+
+###Logical Exclusive OR (XOR)###
+
+`XOR` is a slightly different form of `OR` that evaluates to `false` if neither condition is true, or if _both_ conditions are true.  Here is the truth table:
+
+>	<table cellpadding=10 border=1>
+>	<tr><th>`X`</th><th>`Y`</th><th>`X XOR Y`</th><tr>
+>	<tr><td>false</td><td>false</td><td>false</td></tr>
+>	<tr><td>true</td><td>false</td><td>true</td></tr>
+>	<tr><td>false</td><td>true</td><td>true</td></tr>
+>	<tr><td>true</td><td>true</td><td>false</td></tr>
+>	</table>
+
+You can read XOR as "one or the other but not both".  XOR is not particularly common in programming.
+
+###Logical NOT###
+
+NOT simply inverts the truth of any true/false value.  It has a simpler truth table:
+
+>	<table cellpadding=10 border=1>
+>	<tr><th>`X`</th><th>`NOT X`</th><tr>
+>	<tr><td>false</td><td>true</td></tr>
+>	<tr><td>true</td><td>false</td></tr>
+>	</table>
+
+NOT is very useful in programming.  For example:
+
+>	`if (number_one == 6) and not (number_two == 6) then`  
+>	` puts "Foo"`  
+>	`end`
+
+This code will only execute the `puts` line if `number_one` has the value 6 _and_ `number_two` does _not_ have the value 6.
+
+15. Nested IF Statements
+------------------------
+
+If a condition has to be tested that depends on whether another condition is already `true` (such as "If itÕs 6:30 p.m. and if IÕm logged on" then.....), nested `If` statements can be used.  A nested If statement is one thatÕs enclosed within another If statement.
+
+The format for a nested If statement is as follows: 
+
+>	`if <condition> then`  
+>	`if <another condition> then`  
+>	`<statements>`
+>	`else`  
+>	`<other statements>`  
+>	`end`  
+>	`end`  
+
+`If`statements can be nested, but care should always be taken to ensure that the `else` statement is associated with the correct `if`.
+
+The following examples show the nested if statement.
+
+###Testing for range and number of digits###
+
+Read the following Ruby code:
+
+>	`#`  
+>	`# Testing for range:`  
+>	`# This program will prompt the user for a number between 1 and 99.`  
+>	`# The program will test the number to see if it is less than 10 and inform`  
+>	`# the user that it's a single-digit number.`  
+>	`#`  
+>	`# If it is >9, it will output "double-digit number", otherwise "out of range".`  
+>	``  
+>	`puts "Please enter a number between 1 and 99"`  
+>	`number = gets.to_i`  
+>	``  
+>	`if(number >= 0) and (number <= 99) then`  
+>	`  if (number < 10) then`  
+>	`    puts "#{number} is a single-digit number"`  
+>	`  else # Matches "if (number < 10)"`  
+>	`    puts "#{number} is a double-digit number"`  
+>	`  end`  
+>	`else # Matches "if(number >= 0) and (number <= 99)"`  
+>	`  puts "Out of range"`  
+>	`end`  
+
+**Solution:** The user is prompted to enter a number between 1 and 99 and the value entered is stored in the variable `number`. If the value is not within the specifed range (greater than 0 and less than 100), then the `else` part of the outer `if` statement is executed and the message _Number is out of range_ is displayed on the screen and the program is finished.
+
+On the other hand, if the value is within range, then the first part of the outer `if` statement is executed which contains several lines of code between `if` and `end`. Within this block of code is another `if` statement which tests if the number is less than 10, in which case the message single digit number is displayed on the screen, otherwise (`else`), the message double digit number is displayed on the screen.
+
+16. If..then..elsif
+-------------------
+
+Nested `if` statements can give rise to what is known as 'spaghetti code' - code that is hard to follow and understand.  The `elsif` ("else if") statement can simplify this.
+
+The structure of the statement is as follows:
+
+>	`if <condition> then`  
+>	`<statements>`  
+>	`elsif <condition2> then`  
+>	`<statements2>`  
+>	`elsif <condition3> then`  
+>	`<statements3>`  
+>	`else`  
+>	`<statements4>`  
+>	`end`  
+
+The conditions are evaluated in the order in which they appear in the program.  If any condition is true, the code block that appears after it is executed and the program jumps to the `end` statement.  There is no limit to the number of `elsif` clauses.

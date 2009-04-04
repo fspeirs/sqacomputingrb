@@ -17,7 +17,7 @@ Contents
 11. Programming Constructs: Selection
 12. The IF statement
 13. The If..then..else statement
-14. Comparison and logical Operators: And, Or, Xor, Not.
+14. Relational and logical Operators: And, Or, Xor, Not.
 15. Nested IF statements
 16. Case statements
 17. Summary
@@ -598,4 +598,165 @@ If the `<condition>` is true, `code block 1` will be executed. If `<condition>` 
 >	`	puts "Single digit"`  
 >	`else`  
 >	`  puts "Double digit"`  
+>	`end`  
+
+### Example: Biggest Number ###
+
+**Problem:** What is the output of the following code:
+
+>	`number_one = 10`  
+>	`number_two = 5`  
+>	
+>	`if number_one > number_two then`  
+>	`	puts "number_one is biggest"`  
+>	`else`  
+>	`	puts "number_two is biggest"`  
+>	`end`  
+
+**Solution:** This piece of code uses two integer variables, `number_one` and `number_two`. The variable `number_one` is assigned a value of 10, and `number_two` is assigned a value of 5. 
+The condition for the `if` statement is "is `number_one` greater than `number_two`"? If this is true then the statement "`number_one` is biggest" is displayed. If the condition is false then the statement "`number_two` is biggest" is displayed on the screen. 
+
+In this case the condition is true since `number_one` has a value of 10, which is greater than the value of 5 that has been assigned to `number_two` and so the output from this code is:
+
+>	`number_one is biggest`  
+
+**Example:** `BiggestNumber.rb`
+
+### Example: Not equal to zero ###
+
+**Problem:** What is the output of the following code:
+
+# Program to test if variables are not equal to zero
+
+>	`value_one = 10`  
+>	`value_two = 0`  
+>	
+>	`if (value_one != 0) and (value_two != 0) then`  
+>	`  puts "one"`  
+>	`else`  
+>	`  puts "two"`  
+>	`end`  
+
+**Solution:** This condition for the `if` statement uses a logical `and`. It is testing if `value_one` is not equal to zero and if `value_two` is not equal to zero. In this case `value_two` is equal to zero (true) but `value_one` is not (false). Therefore the whole expression is false, and the text `Two` would be printed on the screen.
+
+**Example:** `NotEqualToZero.rb`
+
+###Exercise: Which is Bigger?###
+
+**Time:** 30 min.
+
+**Problem:** Write a program which prompts a user to type in two numbers - Þrst one, then the other. The program responds by printing the bigger of the two. Use the code fragments in the examples above to help you, and make sure that the program has user-friendly prompts for the input and output.
+
+### Exercise: Even or Odd?###
+
+**Time:** 30 min
+
+**Problem:** Write a program to test if a user entered number is even or odd. 
+In this program you will have to use the modulus operator (`%`) to calculate the 
+remainder when the value stored in the variable `number` is divided by 2. An even number has no remainder if divided by 2. 
+
+###Exercise: Calculating Wages###
+
+**Time:** 20 min 
+
+**Problem:** Write a program to calculate the commission based wages of a computer salesman. His basic wage is &pound;50 per week and he is expected to sell at least 10 computers. If he sells more than 10 computers, he receives an extra &pound;5.50 per computer he sells after the 10th computer. 
+
+14. Relational and logical operators: And, Or, Xor, Not
+------------------------------------------------------
+
+There are two kinds of operators in Ruby: *relational* and *logical*.
+
+Relational operators make comparisons between values: whether one is equal to the other, greater, lesser and so on.
+
+### Relational Operators in Ruby###
+<table cellpadding=10 border=1>
+<tr><th>Symbol</th><th>Example</th><th>Meaning</th></tr>
+<tr><td>`==`</td><td>`a == b`</td><td>`a` equal to `b`</td></tr>
+<tr><td>`&lt;`</td><td>`a &lt; b`</td><td>`a` less than `b`</td></tr>
+<tr><td>`&lt;=`</td><td>`a &lt; b`</td><td>`a` less than or equal to `b`</td></tr>
+<tr><td>`&gt;`</td><td>`a &gt; b`</td><td>`a` greater than `b`</td></tr>
+<tr><td>`&gt;=`</td><td>`a &gt; b`</td><td>`a` greater than or equal to `b`</td></tr>
+<tr><td>`&lt;`</td><td>`a &lt; b`</td><td>`a` less than `b`</td></tr>
+<tr><td>`!=`</td><td>`a != b`</td><td>`a` not equal to `b`</td></tr>
+</table>
+
+###Example: Using a Relational Operator###
+
+**Problem:** Make a comparison between two variables `n1` and `n2` to find out if `n1` is greater than or equal to `n2`.
+
+**Solution:** Use the relational operator `&gt;=`.  For example:
+
+>	`n1 &gt;= n2`
+
+###Example: Using a relational operator in an if statement###
+
+**Problem:** Construct an `if` statement that will display a message to the screen if two variables `n1` and `n2` are equal.
+
+**Solution:** The following solution is typical:
+
+>	`n1 = 9`  
+>	`n2 = 9`  
+>  
+>	`if n1 == n2 then`  
+>	`puts "n1 and n2 are equal"`  
+>	`end`  
+
+###Logical Operators in Ruby###
+
+Logical operators evaluate whether a statement is true or false.
+
+###Logical AND###
+
+An expression that contains a logical `AND` can only be true if *both* parts of the expression are true.
+
+The behaviour of `AND` is often shown as a _truth table_:
+
+>	<table cellpadding=10 border=1>
+>	<tr><th>`X`</th><th>`Y`</th><th>`X AND Y`</th><tr>
+>	<tr><td>false</td><td>false</td><td>false</td></tr>
+>	<tr><td>true</td><td>false</td><td>false</td></tr>
+>	<tr><td>false</td><td>true</td><td>false</td></tr>
+>	<tr><td>true</td><td>true</td><td>true</td></tr>
+>	</table>
+
+Logical `AND` can be used in `if` statents as follows:
+
+>	`if (n1 == 0) and (n2 == 0) then`  
+>	`puts "Both n1 and n2 are zero."`  
+>	`end`  
+
+This code will only print the statement if `n1` is zero _and_ `n2` is zero.
+
+###AND Example: Password Verification###
+
+**Problem:** A program is written which asks the user to enter a password and to conÞrm it by entering it again. If both words are equal to a program constant then the program will display a suitable comment. If not, or only one instance of the password is entered the user will be informed. 
+
+**Pseudocode Solution:**
+
+1. Request first password
+2. Request second password
+3. If (the first password = constant) and (the second password = constant) then
+4.   Display the word entered.
+5. else
+6.   Display the two words and a message stating that they are different.
+
+**Ruby Solution:**
+
+>	`# Define constant (starts with uppercase letter)`  
+>	`Password = "Daffodil"`  
+>	
+>	`# Request first password`  
+>	`puts "Password, please:"`  
+>	`# Note: no need to use to_i, since we want the password as a string.`  
+>	`# However, we do have to use chomp to remove the new line character `  
+>	`# at the end that is generated by the user typing return.`  
+>	`first_password = gets.chomp`  
+>	
+>	`puts "Password again, please:"`  
+>	`second_password = gets.chomp`  
+>	
+>	`if (first_password == Password) and (second_password == Password) then`  
+>	`  puts "Both words #{Password} are identical."`  
+>	`else`  
+>	`  puts "The words #{first_password} and #{second_password} are not identical."`  
 >	`end`  

@@ -18,6 +18,15 @@ TODO
 3. Write the content.
 4. Have the content reviewed for technical accuracy.
 
+Known Issues
+------------
+
+Technical issues with the documents:
+
+* The blockquoted, back-ticked code blocks don't show correct indentation.
+* TOCs are out of sync with the documents.
+* The structure needs to be tightened (some things should be 4-# headings).
+
 Source Documents
 ----------------
 This project is _not_ affiliated with the Scottish Qualifications Agency in any way.

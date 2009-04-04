@@ -906,3 +906,71 @@ The structure of the statement is as follows:
 >	`end`  
 
 The conditions are evaluated in the order in which they appear in the program.  If any condition is true, the code block that appears after it is executed and the program jumps to the `end` statement.  There is no limit to the number of `elsif` clauses.
+
+Consider the situation where you have two boolean variables, `val1` and `val2`, and you need to take actions for each of the possible combinations of true and false. 
+
+Using nested `if` statements, you would have to write:
+
+<pre>
+if val1 == true then
+  if val2 == true then
+    [statements for true/true]
+  else
+	[statements for true/false]
+  end
+else
+  if val2 == false then
+  	[statements for false/true]
+  else
+  	[statements for false/false]
+  end
+end
+</pre>
+
+Using `elsif` will produce more compact code that is easier to read and follow:
+
+<pre>
+if val1 and val2 then
+  [statements for true/true]
+elsif val1 and not val2 then
+  [statements for true/false]
+elsif not val1 and val2 then
+  [statements for false/true]
+else
+  [statements for false/false]
+end
+</pre>
+
+###Example: Using elsif to calculate the number of digits in a number###
+
+**Problem:** How can an `elsif` statement be used to ﬁnd out whether an integer number is within a certain range (a positive number) and how many digits it contains? 
+
+**Solution:** 
+<blockquote>
+<pre>
+puts "Please enter a number between 1 and 9999:"
+number = gets.to_i
+
+if number >= 1000 then
+  puts "Four digits"
+elsif number >= 100 then
+  puts "Three digits"
+elsif number >= 10 then
+  puts "Two digits"
+elsif number >= 0 then
+  puts "One digit"
+else
+  puts "Out of range"
+end
+</pre>
+</blockquote>
+
+* You start testing if the variable `number` is greater than or equal to 1000, in which case there are 4 digits (you must be assuming that the variable `number` is not greater than 9999) and the program prints "Four Digits". If it is not greater than or equal to 1000, then you move onto the next branch of the `if` statement. 
+* The next condition tests the variable `number` to see if it is greater than or equal to 100. If this is true then you know the variable `number` has a value between 100 and 999, and so it must have 3 digits, and the program prints "Three digits". Again, if this condition is not fulﬁlled, then you move onto the next branch of the `if` statement. 
+* The next condition tests the variable `number` to see if it is greater than or equal to 10. If this is true then you know the variable `number` has a value between 10 and 99, and so it must have 2 digits, and the program prints "Two digits". Again, if this condition is not fulﬁlled, then you move onto the next branch of the `if` statement.
+* The next condition tests the variable `number` to see if it greater than or equal to 0. If this is true then you know that the variable number has a value between 0 and 9, and so it must have one digit. The program prints "One Digit". 
+* The next branch of the `if` statement is not an `elsif` branch, but an `else` branch, and so does not have a condition but is the branch that is executed if none of the other conditions are met. Execution of this branch of the `if` statement results in the message "Out of Range" being displayed on the screen. 
+
+###Example: Grades and Marks###
+
+**Problem:** Write a program using the `elsif` construct for a user to input a test result and output the corresponding grade. Test scores range from 0 to 100 and the grades from "A" being the highest to "E" the lowest.

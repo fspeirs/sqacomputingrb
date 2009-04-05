@@ -12,7 +12,7 @@ Approach
 
 The document `/Originals/HigherSoftwareDevelopment.pdf` is mostly general reference material on software development. The specific sections which need to be Rubified are:
 
-* Section 6: High Level Language Constructs 1
+* Section 6: High Level Language Constructs 1 [DONE]
 * Section 7: High Level Language Constructs 2
 * Section 8: Procedures and Standard Algorithms
 

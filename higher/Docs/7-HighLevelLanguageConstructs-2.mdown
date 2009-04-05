@@ -9,3 +9,34 @@ High Level Language Constructs 2
 6. Arrays: Declaring and initialising.
 7. Arrays: examples.
 8. Summary
+
+
+1. Introduction
+---------------
+
+An important aspect of this topic is the 1-dimensional array. Declaring and initialising arrays are introduced together with how data is manipulated within arrays using various looping structures. Each sub topic has working solutions to the example programs thus providing a suitable environment for building conŞdence in writing programs before the Şnal topic, dealing with standard algorithms is covered. 
+
+One aim of this topic is to introduce you to iterative structures, or loops. Iteration simply means repetition, which in the context of programming is the execution of blocks of code many times over. 
+
+Iteration is a fundamental part of almost every program and is one of the most useful features of programming. You do not want a computer to produce one payslip, but many payslips; to add up just two numbers but thousands of numbers; to put in order just two items but thousands of items. 
+
+There are three different looping constructs you can use in Ruby:
+
+1. For...Next loop 
+2. Do...While loop 
+3. Do...Until loop 
+
+Most loops have the following characteristics in common: 
+
+* initialisation 
+* a condition which evaluates either to TRUE or FALSE 
+* a counter that increments or decrements by discrete values. 
+
+
+2. Iteration: For Loop
+
+In Ruby, you can use the _Range_ object introduced in the last section to control iteration in a `for` loop:
+
+>	`for x in 1..10 do`  
+>	`<statements>`  
+>	`end`

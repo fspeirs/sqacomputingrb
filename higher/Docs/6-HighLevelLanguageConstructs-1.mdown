@@ -974,3 +974,149 @@ end
 ###Example: Grades and Marks###
 
 **Problem:** Write a program using the `elsif` construct for a user to input a test result and output the corresponding grade. Test scores range from 0 to 100 and the grades from "A" being the highest to "E" the lowest.
+
+**Pseudocode Solution:**
+
+1. Ask user to input a mark between 0 and 100
+2. If mark (>=0 and < 30) then grade "E"
+3. elsif mark(>=30 and < 49) then grade "D"
+4. elsif mark(>=49 and < 65) then grade "C"
+5. elsif mark(>=65 and < 85) then grade "B"
+6. elsif mark(>=85 and <=100) then grade "A"
+7. else number out of range
+8. end if
+9. if mark (>=0 and <=100)
+10. display grade
+11. end if
+
+**Ruby Solution:**
+
+>	`puts "Please enter score:"`  
+>	`mark = gets.to_i`  
+>	``  
+>	`if (mark >= 0) and (mark < 30) then`  
+>	`  grade = "E"`  
+>	`elsif (mark >= 30) and (mark < 49) then`  
+>	`  grade = "D"`  
+>	`elsif (mark >= 49) and (mark < 65) then`  
+>	`  grade = "C"`  
+>	`elsif (mark >= 65) and (mark < 85) then`  
+>	`  grade = "B"`  
+>	`elsif (mark >= 85) and (mark <= 100) then`  
+>	`  grade = "A"`  
+>	`else`  
+>	`  puts "Number out of range"`  
+>	`end`  
+>	``  
+>	`if (mark >= 0) and (mark <= 100) then`  
+>	`  puts "The mark #{mark} gets grade #{grade}."`  
+>	`end`  
+
+###Exercise: Calculating Leap Years###
+
+A leap year is a year which is exactly divisible by 4, unless it is exactly divisible by 100 in which case it is only a leap year if it is exactly divisible by 400. Write a program which prompts the user for a year and then displays if it is a leap year or not. 
+
+Note: Use `elsif` in your code. You will also need to be careful that you do the tests for leap years and leap centuries in the correct order. If you test for leap years Şrst, then 1900 is divisible by 4, but as it is not a leap centur y it will not be a leap year either.
+
+18. Case Statements
+-------------------
+
+The `case` statement is a special instance of the `if..then..elsif` structure. 
+To implement multi-way decisions the `case` statement provides a more concise and elegant representation than multiple `elsif` and nested `if` statements, which can get very difŞcult to follow. Probably if you have more than three `elsif` statements you should consider using the `case` statement instead. 
+
+The `case` statement is particularly useful when selection is based on a single variable or a simple expression. This is called the case selector.
+
+The structure of the `case` statement is:
+
+>	`case <selector>`  
+>	`  when 1`  
+>	`  	<statements>`  
+>	`  when 2`  
+>	`  	<statements>`  
+>	`  when 3`  
+>	`  	<statements>`  
+>	`  else`  
+>	`  	<statements>`  
+>	`end`  
+
+The first line is the `case` statement itself. This statement identifies the value to be tested - the _selector_. There then follows a number of `when` clauses which specify statements to be executed when the selector carries a certain value.
+
+If the case selector does not match a particular `when` clause, the statements within that clause are not executed.
+
+###Example: Convert number to day of the week###
+
+**Problem:** Take a number from the user and print the appropriate day of the week.
+
+**Pseudocode Solution:** 
+
+1. Get a number from the user between 1 and 7
+2. case number
+3. case 1, output "Sunday"
+4. case 2, output "Monday"
+5. case 3, output "Tuesday"
+6. case 4, output "Wednesday"
+7. case 5, output "Thursday"
+8. case 6, output "Friday"
+9. case 7, output "Saturday"
+
+**Ruby Solution:** DayOfWeek.rb
+
+###Example: Use case with a range of values###
+
+**Problem:** Rewrite the mark-to-grade program using `case`.
+
+A new kind of object in Ruby will be very useful for this problem: the _Range_ object.  A Range object represents an interval of values with a start and end.
+
+You use a Range in your program as follows:
+
+>	`my_range = 0..10`  
+
+This creates a new Range from 0 to 10.  When you have created a Range, you can use it with `===` (**note:** _three_ equals signs) to test whether a number is contained in the range.
+
+Try the following in IRB:
+
+>	`(0..10) === 9`  
+>	`(0..100) === 99`  
+>	`(0..100) === 100`  
+>	`(0..100) === 101`  
+
+When you use a `Range` object in a `case` statement, Ruby uses the `===` operator internally to test whether the case selector is within the range.
+
+**Pseudocode solution:**
+
+1. Get a mark from the user between 0 and 100.
+2. case mark
+3. when 85..100, Grade A
+4. when 85..100, Grade B
+5. when 85..100, Grade C
+6. when 85..100, Grade D
+7. when 85..100, Grade E
+8. else output "Out of range"
+9. end
+
+**Ruby Solution:**
+
+>	`puts "Please enter a mark (0-100):"`  
+>	`mark = gets.to_i`  
+>  
+>	`case mark`  
+>	`when 85..100`  
+>	`  puts "Grade A"`  
+>	`when 65..84`  
+>	`  puts "Grade B"`  
+>	`when 50..64`  
+>	`  puts "Grade C"`  
+>	`when 30..49`  
+>	`  puts "Grade D"`  
+>	`when 0..29`  
+>	`  puts "Grade E"`  
+>	`else`  
+>	`  puts "Mark outside range. Try again."`  
+>	`end`  
+
+###Exercise: Test Valid Music Notes###
+
+**Time:** 40 minutes
+
+**Problem:** Write a program that takes a letter from the user and uses a `case` statement to test if it is a valid musical note.
+
